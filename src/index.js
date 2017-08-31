@@ -3,6 +3,6 @@ import ReactDOM from 'react-dom';
 
 
 ReactDOM.render(
-  <h1>React is running</h1>,
+  <h1>React is running!!</h1>,
   document.getElementById('root')
 );

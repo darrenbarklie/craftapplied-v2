@@ -1,0 +1,20 @@
+{
+  "name": "craftapplied-v4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "Darren Barklie",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/darrenbarklie/craftapplied-v4.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/darrenbarklie/craftapplied-v4/issues"
+  },
+  "homepage": "https://github.com/darrenbarklie/craftapplied-v4#readme"
+}

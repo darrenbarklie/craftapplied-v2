@@ -11,6 +11,10 @@ module.exports = {
     publicPath: '/',
     filename: 'bundle.js'
   },
+  devServer: {
+    contentBase: path.join(__dirname, 'dist'),
+    port: 8080,
+  },
   module: {
     loaders: [
       { // JSX Loader //

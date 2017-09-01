@@ -1,0 +1,58 @@
+@mixin draw-border($border-color, $text-color, $hover-color) {
+  position: relative;
+  vertical-align: middle;
+  background: none;
+  border: 0;
+  margin: 1em;
+  padding: 1em 2em;
+  box-shadow: inset 0 0 0 2px $border-color;
+  color: $text-color;
+  transition: color 0.25s;
+  &::before,
+  &::after {
+    box-sizing: inherit;
+    content: '';
+    position: absolute;
+    border: 2px solid transparent;
+    width: 0;
+    height: 0;
+  }
+  &::before {
+    top: 0;
+    left: 0;
+  }
+  &::after {
+    top: 0;
+    left: 0;
+  }
+  &:hover {
+    color: $hover-color;
+  }
+  &:hover::before,
+  &:hover::after {
+    width: 100%;
+    height: 100%;
+  }
+  &:hover::before {
+    border-top-color: $hover-color;
+    border-right-color: $hover-color;
+    transition:
+      width 0.25s ease-out,
+      height 0.25s ease-out 0.25s;
+  }
+  &:hover::after {
+    border-bottom-color: $hover-color;
+    border-left-color: $hover-color;
+    transition:
+      border-color 0s ease-out 0.5s,
+      width 0.25s ease-out 0.5s,
+      height 0.25s ease-out 0.75s;
+    transition:
+       height 0.25s ease-out,
+       width 0.25s ease-out 0.25s;
+  }
+  &:active {
+    color: darken($hover-color, 10%);
+    transition: color linear 0.2s;
+  }
+}

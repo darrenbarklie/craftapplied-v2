@@ -1,0 +1,61 @@
+/* Debug Responsive - Flexbox Grid */
+
+/* Extra Large Devices, Retina Wide Screens */
+@media only screen and (min-width : 75em) {
+  .app {
+    border: 2px solid purple;
+  }
+  .test-xl {
+    border: 2px solid purple;
+  }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 75em) {
+  .app {
+    border: 2px solid red;
+  }
+  .test-lg {
+    border: 2px solid red;
+  }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 64em) {
+  .app {
+    border: 2px solid orange;
+  }
+  .test-md {
+    border: 2px solid orange;
+  }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 48em) {
+  .app {
+    border: 2px solid yellow;
+  }
+  .test-sm {
+    border: 2px solid yellow;
+  }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 30em) {
+  .app {
+    border: 2px solid green;
+  }
+  .test-xs {
+    border: 2px solid green;
+  }
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 22em) {
+  .app {
+    border: 2px solid blue;
+  }
+  .test-xxs {
+    border: 2px solid blue;
+  }
+}

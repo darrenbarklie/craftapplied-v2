@@ -1,3 +1,15 @@
+@import 'mixins/reset';
+
+@import 'globals/colors';
+@import 'globals/typography';
+
+
+//@import 'mixins/aspect-ratio';
+//@import 'mixins/background-pattern';
+//@import 'mixins/draw-border';
+//@import 'mixins/test-responsive';
+
+
 body {
   background: green;
   h1 { color: white; }

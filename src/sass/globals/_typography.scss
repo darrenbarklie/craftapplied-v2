@@ -1,0 +1,110 @@
+@import url("//hello.myfonts.net/count/33f49f");
+$fontPath: "../assets/font" !default;
+
+/*
+  font-family: "NeuzeitOffice-Bold";
+  font-family: "NeuzeitOffice-BoldItalic";
+  font-family: "NeuzeitOffice-Italic";
+  font-family: "NeuzeitOffice-Regular";
+*/
+
+/* System Fonts */
+@font-face {
+  font-family: system;
+  font-style: normal;
+  font-weight: 300;
+  src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
+}
+
+/* NeuzeitOffice Fonts */
+@font-face {
+  font-family: 'NeuzeitOffice-Bold';
+  src: url('#{$fontPath}/33F49F_0_0.eot');
+  src: url('#{$fontPath}/33F49F_0_0.eot?#iefix') format('embedded-opentype'),
+  url('#{$fontPath}/33F49F_0_0.woff2') format('woff2'),
+  url('#{$fontPath}/33F49F_0_0.woff') format('woff'),
+  url('#{$fontPath}/33F49F_0_0.ttf') format('truetype'),
+  url('#{$fontPath}/33F49F_0_0.svg#wf') format('svg');
+}
+
+@font-face {
+  font-family: 'NeuzeitOffice-BoldItalic';
+  src: url('#{$fontPath}/33F49F_1_0.eot');
+  src: url('#{$fontPath}/33F49F_1_0.eot?#iefix') format('embedded-opentype'),
+  url('#{$fontPath}/33F49F_1_0.woff2') format('woff2'),
+  url('#{$fontPath}/33F49F_1_0.woff') format('woff'),
+  url('#{$fontPath}/33F49F_1_0.ttf') format('truetype'),
+  url('#{$fontPath}/33F49F_1_0.svg#wf') format('svg');
+}
+
+@font-face {
+  font-family: 'NeuzeitOffice-Italic';
+  src: url('#{$fontPath}/33F49F_2_0.eot');
+  src: url('#{$fontPath}/33F49F_2_0.eot?#iefix') format('embedded-opentype'),
+  url('#{$fontPath}/33F49F_2_0.woff2') format('woff2'),
+  url('#{$fontPath}/33F49F_2_0.woff') format('woff'),
+  url('#{$fontPath}/33F49F_2_0.ttf') format('truetype'),
+  url('#{$fontPath}/33F49F_2_0.svg#wf') format('svg');
+}
+
+@font-face {
+  font-family: 'NeuzeitOffice-Regular';
+  src: url('#{$fontPath}/33F49F_3_0.eot');
+  src: url('#{$fontPath}/33F49F_3_0.eot?#iefix') format('embedded-opentype'),
+  url('#{$fontPath}/33F49F_3_0.woff2') format('woff2'),
+  url('#{$fontPath}/33F49F_3_0.woff') format('woff'),
+  url('#{$fontPath}/33F49F_3_0.ttf') format('truetype'),
+  url('#{$fontPath}/33F49F_3_0.svg#wf') format('svg');
+}
+
+/* Global Base Styles */
+body {
+  font-family: 'NeuzeitOffice-Regular', system;
+  font-size: 18px;
+  color: $black;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'NeuzeitOffice-Bold', serif;
+  line-height: 1.333;
+}
+h1 { font-size: 4.209em; }
+h2 { font-size: 3.157em; }
+h3 { font-size: 2.369em; }
+h4 { font-size: 1.777em; }
+h5 { font-size: 1.333em; margin-bottom: 0.2em; }
+h6 { font-size: 1em; margin-bottom: 0.25em; }
+p {
+  font-family: 'NeuzeitOffice-Regular', system;
+  margin-bottom: 1em;
+  line-height: 1.333;
+}
+ul {
+  list-style: none;
+  font-size: 1em;
+  line-height: 1.333;
+  margin: 0 0 1em 3em;
+  li {
+    margin: 0 0 0.33em 0;
+    &::before {
+      content: "■";
+      font-family: "Arial";
+      color: $base-green;
+      padding-right: 0.75em;
+    }
+  }
+}
+a {
+  font-family: 'NeuzeitOffice-Bold', system;
+  color: $base-green;
+  transition: color 0.5s ease-out;
+  text-decoration: none;
+  outline: 0 none;
+  &:hover, &:active {
+    color: lighten($base-green, 15%);
+    transition: color 0.33s linear;
+  }
+  &:active {
+    color: darken($base-green,10%);
+    transition: color 0.1s linear;
+  }
+}

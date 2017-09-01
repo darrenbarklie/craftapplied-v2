@@ -1,8 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+require('./sass/base.scss');
+
+import App from './components/App';
 
 ReactDOM.render(
-  <h1>React is running!  Webpack Dev Server is running!  Testing Heroku deployment......</h1>,
+  <App />,
   document.getElementById('root')
 );

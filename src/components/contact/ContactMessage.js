@@ -1,7 +1,22 @@
 import React, { Component } from 'react';
-
+import ReCAPTCHA from 'react-google-recaptcha';
 
 class ContactMessage extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      'g-recaptcha-success': false
+    };
+  }
+
+  onChange(response) {
+    this.setState({
+      'g-recaptcha-response': response,
+      'g-recaptcha-success': true
+    });
+  }
+
   render() {
     return (
       <form id="contact-message" className="contact-message"
@@ -25,7 +40,15 @@ class ContactMessage extends Component {
           <textarea name="message"></textarea>
         </label>
 
-        <input type="submit" value="Send" />
+        <ReCAPTCHA
+          ref="recaptcha"
+          sitekey="6LfIbzAUAAAAAN5eOOCMPFsdRSebPr423bl1UdlV"
+          onChange={this.onChange.bind(this)}
+        />
+
+        <input type="submit" value="Send"
+          
+        />
 
       </form>
     )
@@ -33,12 +56,3 @@ class ContactMessage extends Component {
 }
 
 export default ContactMessage;
-
-
-// handleSubmit(e) {
-//   e.preventDefault();
-//   let name = this.refs.name.value;
-//   let email = this.refs.email.value;
-//   let subject = this.refs.subject.value;
-//   let message = this.refs.message.value;
-// },

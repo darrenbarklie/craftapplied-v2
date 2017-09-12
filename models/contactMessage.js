@@ -3,6 +3,10 @@ const Schema = mongoose.Schema;
 
 // Create Contact Schema & model
 const ContactMessageSchema = new Schema({
+  time: {
+    type: Date,
+    default: Date.now
+  },
   name: {
     type: String,
     required: [true, 'Name is required']
@@ -18,6 +22,10 @@ const ContactMessageSchema = new Schema({
   message: {
     type: String,
     required: [true, 'Message is required']
+  },
+  source: {
+    type: String,
+    default: 'Contact Message'
   }
 });
 

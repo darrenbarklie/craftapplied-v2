@@ -15,6 +15,7 @@ module.exports = {
     contentBase: path.join(__dirname, 'dist'),
     port: 8080,
   },
+  watch: true,
   module: {
     loaders: [
       { // JSX Loader //

@@ -12,10 +12,10 @@ router.get('/contact', function(req, res, next) {
 router.post('/contact', function(req, res, next) {
   // Create and save instance with promise
   ContactMessage.create(req.body).then(function(contactMessage){
-    // Send
 
-
-
+/*
+    res.redirect(307, '/test');
+*/
 
 /*
     res.statusCode = 302;
@@ -23,11 +23,7 @@ router.post('/contact', function(req, res, next) {
     res.end();
 */
 
-/*
     res.send(contactMessage);
-*/
-
-
 
   }).catch(next);
 });

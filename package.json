@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "node node_modules/webpack-dev-server/bin/webpack-dev-server.js",
     "deploy": "webpack -p",
+    "nodemon": "node node_modules/nodemon/bin/nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "webpack": "webpack"
   },

@@ -6,7 +6,6 @@ module.exports = {
     './src/index.js'
   ],
   output: {
-    //path: __dirname,
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/',
     filename: 'bundle.js'
@@ -15,7 +14,7 @@ module.exports = {
     contentBase: path.join(__dirname, 'dist'),
     port: 8080,
   },
-  watch: true,
+  //watch: true,
   module: {
     loaders: [
       { // JSX Loader //

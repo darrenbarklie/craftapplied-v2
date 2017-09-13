@@ -47,7 +47,7 @@ class ContactMessage extends Component {
         />
 
         <input type="submit" value="Send"
-          
+
         />
 
       </form>

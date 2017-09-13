@@ -2,9 +2,10 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 
+
 const app = express();
 
-//const uri = 'mongodb://localhost/craftapplied';
+const local = 'mongodb://localhost/craftapplied';
 const uri = 'mongodb://darrenbarklie:H3r0kuCr4ft4pPli3d;@ds131914.mlab.com:31914/heroku_2v8d6s86';
 
 

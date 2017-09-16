@@ -1,0 +1,27 @@
+
+header.global {
+  display: flex;
+  border: 1px solid green;
+  .logo {
+    flex: 0 0 auto;
+    display: inline-block;
+    border: 1px solid red;
+    width: 128px;
+    height: 128px;
+  }
+  .navigation-primary {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    border: 1px solid blue;
+    a {
+      display: inline-block;
+      color: $black;
+      padding: 1em;
+    }
+    .cta {
+      @include draw-border(red, green, yellow);
+    }
+  }
+
+}

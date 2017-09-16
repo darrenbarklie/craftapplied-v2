@@ -3,14 +3,130 @@
 @import 'globals/colors';
 @import 'globals/typography';
 
-
 //@import 'mixins/aspect-ratio';
 //@import 'mixins/background-pattern';
-//@import 'mixins/draw-border';
+@import 'mixins/draw-border';
 //@import 'mixins/test-responsive';
 
+@import 'components/header';
 
 body {
+  background: rgba(green, 0.2);
+}
+
+.home {
+  background: yellow;
+}
+.services {
+  background: red;
+}
+.contact {
   background: green;
-  h1 { color: white; }
+}
+
+
+
+
+
+
+
+
+
+
+
+$glyph-base: 2em;
+
+.glyph {
+  margin: $glyph-base;
+}
+
+.glyph-square-fill {
+  display: block;
+  width: $glyph-base;
+  height: $glyph-base;
+  background: $base-green;
+}
+.glyph-square-outline {
+  display: block;
+  width: $glyph-base;
+  height: $glyph-base;
+  box-shadow: inset 0 0 0 ($glyph-base / 8) $base-green;
+}
+.glyph-circle-fill {
+  display: block;
+  width: $glyph-base;
+  height: $glyph-base;
+  border-radius: ($glyph-base / 2);
+  background: $base-green;
+}
+.glyph-circle-outline {
+  display: block;
+  width: $glyph-base;
+  height: $glyph-base;
+  border-radius: ($glyph-base / 2);
+  box-shadow: inset 0 0 0 ($glyph-base / 8) $base-green;
+}
+.glyph-cylinder-fill {
+  display: block;
+  position: relative;
+  left: ($glyph-base / 4);
+  width: ($glyph-base / 2);
+  height: ($glyph-base / 2);
+  background: $base-green;
+  &::before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: ($glyph-base / 2);
+    height: ($glyph-base / 2);
+    margin-left: -($glyph-base / 4);
+    border-radius: ($glyph-base / 2);
+    background: $base-green;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: ($glyph-base / 2);
+    height: ($glyph-base / 2);
+    margin-left: ($glyph-base / 4);
+    border-radius: ($glyph-base / 2);
+    background: $base-green;
+  }
+}
+
+
+
+
+.glyph-cylinder-outline {
+  display: block;
+  position: relative;
+  left: ($glyph-base / 4);
+  width: ($glyph-base / 2);
+  height: ($glyph-base / 2);
+  //background: red;
+  box-shadow: inset 0 0 0 ($glyph-base / 16) red;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: ($glyph-base / 2);
+    height: ($glyph-base / 2);
+    margin-left: -($glyph-base / 4);
+    border-radius: ($glyph-base / 2);
+    //background: red;
+    box-shadow: inset 0 0 0 ($glyph-base / 16) red;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: ($glyph-base / 2);
+    height: ($glyph-base / 2);
+    margin-left: ($glyph-base / 4);
+    border-radius: ($glyph-base / 2);
+    //background: red;
+    box-shadow: inset 0 0 0 ($glyph-base / 16) red;
+  }
 }

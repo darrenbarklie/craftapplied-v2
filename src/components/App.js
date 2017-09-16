@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
 
-import ContactMessage from './contact/ContactMessage';
+import Layout from './globals/Layout';
 
 
 class App extends Component {
   render() {
     return (
-      <div className="app">
-        <ContactMessage />
-      </div>
+      <Router>
+        <div className="app">
+          <Layout />
+        </div>
+      </Router>
     )
   }
 }

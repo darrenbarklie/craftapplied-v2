@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 class Home extends Component {
   render() {
     return (
-      <div className="home">
+      <div className="page home">
         <h3>Home</h3>
 
         <div className="glyph glyph-square-fill"></div>
